@@ -1,38 +1,93 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(23, 23, 23);
+  box-sizing: border-box;
+}
+
+header {
+  width: 500px;
+  margin: 10rem auto;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 10px;
+}
+.grid-item {
+  background-color: rgba(238, 143, 75, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  margin: 10px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border-radius: 15px;
+}
+.grid-item:hover {
+  filter: brightness(0.8);
+  cursor: pointer;
+}
+.grid-item:hover {
+  background-color: orange;
+}
+.icons {
+  color: #fff;
+  animation: pulse 0.4s linear 1;
 }
 
-.App-link {
-  color: #61dafb;
+.who-turns {
+  color: rgb(209, 164, 80);
+  text-align: center;
+  margin: 0 10px 10px 0;
+  animation: pulse 0.3s linear 1;
+  font-size: 3rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+h2 {
+  color: rgb(209, 164, 80);
+  text-align: center;
+  margin: 0 10px 10px 0;
+  animation: pulse 0.3s linear 1;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+h1 {
+  text-align: center;
+  color: aliceblue;
+  margin-bottom: 1rem;
+}
+.button-reset {
+  display: flex;
+  justify-content: center;
+}
+.button-reset > .button {
+  min-width: calc(500px / 2 + 200px);
+  min-height: 30px;
+  border: none;
+  background-color: mediumpurple;
+  font-size: 1.3rem;
+  color: aliceblue;
+  padding: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.button:hover {
+  filter: brightness(0.8);
+}
+
+@keyframes pulse {
+  25% {
+    transform: scale(0.9);
   }
-  to {
-    transform: rotate(360deg);
+  75% {
+    transform: scale(1.1);
   }
 }
